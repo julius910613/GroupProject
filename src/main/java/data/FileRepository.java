@@ -16,10 +16,10 @@ import model.User;
 public class FileRepository {
    static DocumentData fd = new DocumentData();
 
-    public Document getFileInfo(User user, String filename){
+    public Document getFileInfo(String email, String filename){
 
 
-        Document file = fd.getFileInfo(user.getUserEmailAddress()+filename) ;
+        Document file = fd.getFileInfo(email+filename) ;
         return file;
     }
 

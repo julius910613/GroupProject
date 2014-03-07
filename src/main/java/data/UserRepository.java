@@ -16,12 +16,9 @@ public class UserRepository {
 
    static UserData ud = new UserData();
 
-    public boolean findUserByEmail(String email){
-        boolean flag = false;
+    public User findUserByEmail(String email){
 
-        if(ud.getUserInfo(email) == null)  flag = false;
-        else flag = true;
-        return flag;
+        return ud.getUserInfo(email);
     }
 
     public void RegisterNewUser(User user){

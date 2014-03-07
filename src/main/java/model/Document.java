@@ -15,6 +15,15 @@ public class Document implements Serializable {
     private String fileName;
     private String senderName;
     private String receiverName;
+    private String documentHashCode;
+
+    public String getDocumentHashCode() {
+        return documentHashCode;
+    }
+
+    public void setDocumentHashCode(String documentHashCode) {
+        this.documentHashCode = documentHashCode;
+    }
 
     public String getReceiverName() {
         return receiverName;
@@ -40,9 +49,10 @@ public class Document implements Serializable {
         this.fileName = fileName;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "File info [filename =" + fileName + ", receiverName=" + receiverName + ", senderName=" + senderName + "]";
+    }
 
 
 }
